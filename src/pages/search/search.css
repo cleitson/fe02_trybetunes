@@ -1,0 +1,6 @@
+.render-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 50px 20px;
+  justify-content: space-evenly;
+}
