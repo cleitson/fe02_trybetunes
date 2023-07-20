@@ -1,15 +1,15 @@
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import getMusics from '../../services/musicsAPI';
-import Loading from '../../components/loading/loading';
+import Loading from '../../components/Loading/Loading';
 import { AlbumType, SongType } from '../../types';
-import MusicList from '../../components/musicList/musicList';
+import MusicList from '../../components/MusicList/MusicList';
 import './album.css';
 
 export default function Album() {
   const [load, setLoad] = useState<boolean>(true);
   const [coverAlbum, setCoverAlbum] = useState<AlbumType>();
-  const [album, setAlbum] = useState<(AlbumType | SongType)[]>();
+  const [album, setAlbum] = useState<SongType[] | undefined>();
 
   const params = useParams();
   const { id } = params;
@@ -19,11 +19,9 @@ export default function Album() {
       const albums = await getMusics(String(id));
       setLoad(false);
       setCoverAlbum(albums[0]);
-      const newAlbum = albums.slice();
+      const newAlbum:any = albums.slice();
       newAlbum.splice(0, 1);
       setAlbum(newAlbum);
-      console.log(coverAlbum);
-      console.log(albums);
     };
     musics();
   }, [id]);

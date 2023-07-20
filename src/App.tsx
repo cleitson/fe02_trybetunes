@@ -1,8 +1,8 @@
 import { Route, Routes } from 'react-router-dom';
-import NotFound from './components/notFound/notFound';
-import Login from './pages/login/login';
-import Search from './pages/search/search';
-import Album from './pages/album/album';
+import NotFound from './components/NotFound/NotFound';
+import Login from './pages/Login/Login';
+import Search from './pages/Search/Search';
+import Album from './pages/Album/Album';
 
 function App() {
   return (

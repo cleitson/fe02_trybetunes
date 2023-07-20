@@ -1,6 +1,6 @@
 import { NavLink } from 'react-router-dom';
 import { AlbumType } from '../../types';
-import './listAlbum.css';
+import './ListAlbum.css';
 
 type ListAlbumProp = {
   prop: AlbumType,

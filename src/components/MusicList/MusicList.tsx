@@ -1,5 +1,5 @@
 import { SongType } from '../../types';
-import './musicList.css';
+import './MusicList.css';
 
 type MusicListProp = {
   musics: SongType,
