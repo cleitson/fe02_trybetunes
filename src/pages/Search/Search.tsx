@@ -2,7 +2,7 @@ import { useState } from 'react';
 import searchAlbumsAPI from '../../services/searchAlbumsAPI';
 import { AlbumType } from '../../types';
 import ListAlbum from '../../components/ListAlbum/ListAlbum';
-import './search.css';
+import './Search.css';
 
 function Search() {
   type InputData = {

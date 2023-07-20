@@ -4,7 +4,7 @@ import getMusics from '../../services/musicsAPI';
 import Loading from '../../components/Loading/Loading';
 import { AlbumType, SongType } from '../../types';
 import MusicList from '../../components/MusicList/MusicList';
-import './album.css';
+import './Album.css';
 
 export default function Album() {
   const [load, setLoad] = useState<boolean>(true);
