@@ -1,4 +1,5 @@
 import { SongType } from '../../types';
+import './musicList.css';
 
 type MusicListProp = {
   musics: SongType,
@@ -6,11 +7,12 @@ type MusicListProp = {
 
 function MusicList({ musics }: MusicListProp) {
   const {
+    trackId,
     trackName,
     previewUrl,
   } = musics;
   return (
-    <div>
+    <div className="musicList-container">
       <span>{trackName}</span>
       <audio data-testid="audio-component" src={ previewUrl } controls>
         <track kind="captions" />

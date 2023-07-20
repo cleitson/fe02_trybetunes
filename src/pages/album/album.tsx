@@ -4,6 +4,7 @@ import getMusics from '../../services/musicsAPI';
 import Loading from '../../components/loading/loading';
 import { AlbumType, SongType } from '../../types';
 import MusicList from '../../components/musicList/musicList';
+import './album.css';
 
 export default function Album() {
   const [load, setLoad] = useState<boolean>(true);
@@ -29,13 +30,13 @@ export default function Album() {
   return (
     <div>
       {load ? (<Loading />) : (
-        <div>
-          <div>
+        <div className="album-container">
+          <div className="render-album">
             <img src={ coverAlbum?.artworkUrl100 } alt={ coverAlbum?.collectionName } />
             <p data-testid="album-name">{coverAlbum?.collectionName}</p>
             <p data-testid="artist-name">{coverAlbum?.artistName}</p>
           </div>
-          <div>
+          <div className="render-musics">
             {album?.map((songs) => (<MusicList
               key={ songs?.trackId }
               musics={ {
