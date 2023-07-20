@@ -1,3 +1,17 @@
+.search-container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  height: 15vw;
+  justify-content: center;
+  width: 100vw;
+}
+
+div > h2 {
+  text-align: center;
+}
+
 .render-container {
   display: flex;
   flex-wrap: wrap;

@@ -54,7 +54,7 @@ function Search() {
   };
   return (
     <>
-      <div>
+      <div className="search-container">
         <input
           data-testid="search-artist-input"
           name="name"
@@ -69,12 +69,17 @@ function Search() {
           Pesquisar
         </button>
       </div>
-      <div className="render-container">
-        {albumData.length > 1 ? (
-          <h2>{`Resultado de álbuns de: ${artistName}`}</h2>) : ('')}
-        {show && (albumData.length > 1 ? (
-          albumData.map((data) => <ListAlbum prop={ data } key={ data.collectionId } />))
-          : (<h1>Nenhum álbum foi encontrado</h1>)) }
+      <div>
+        <div>
+          {albumData.length > 1 ? (
+            <h2>{`Resultado de álbuns de: ${artistName}`}</h2>) : ('')}
+        </div>
+        <div className="render-container">
+          {show && (albumData.length > 1 ? (
+            albumData
+              .map((data) => <ListAlbum prop={ data } key={ data.collectionId } />))
+            : (<h1>Nenhum álbum foi encontrado</h1>)) }
+        </div>
       </div>
     </>
   );
