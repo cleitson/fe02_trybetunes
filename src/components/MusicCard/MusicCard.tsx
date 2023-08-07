@@ -10,7 +10,7 @@ type MusicCardProp = {
 
 function MusicCard({ musics }: MusicCardProp) {
   const [isChecked, setIsChecked] = useState(false);
-  const [favoriteSongs, setFavoriteSongs] = useState<SongType[]>();
+  // const [favoriteSongs, setFavoriteSongs] = useState<SongType[]>();
 
   const {
     trackId,
@@ -22,9 +22,9 @@ function MusicCard({ musics }: MusicCardProp) {
     setIsChecked(!isChecked);
   };
 
-  function handleChange(event: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) {
-    const { name, type } = event.target;
-  }
+  // function handleChange(event: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) {
+  //   const { name, type } = event.target;
+  // }
 
   return (
     <div className="musicList-container">
