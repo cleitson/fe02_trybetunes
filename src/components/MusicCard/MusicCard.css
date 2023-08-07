@@ -1,0 +1,19 @@
+
+.musicList-container {
+  align-items: center;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin: 20px;
+}
+
+.imagem-checkbox {
+  width: 23px;
+  height: 20px;
+}
+
+/* Esconder o input padrão */
+input[type="checkbox"] {
+  display: none;
+} 
+

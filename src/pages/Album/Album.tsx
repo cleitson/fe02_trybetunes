@@ -3,7 +3,7 @@ import { useParams } from 'react-router-dom';
 import getMusics from '../../services/musicsAPI';
 import Loading from '../../components/Loading/Loading';
 import { AlbumType, SongType } from '../../types';
-import MusicList from '../../components/MusicList/MusicList';
+import MusicCard from '../../components/MusicCard/MusicCard';
 import './Album.css';
 
 export default function Album() {
@@ -35,7 +35,7 @@ export default function Album() {
             <p data-testid="artist-name">{coverAlbum?.artistName}</p>
           </div>
           <div className="render-musics">
-            {album?.map((songs) => (<MusicList
+            {album?.map((songs) => (<MusicCard
               key={ songs?.trackId }
               musics={ {
                 trackId: songs?.trackId,
